@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App Report</title>
+</head>
+<body>
+    <h1>Music App Report</h1>
+    
+    <div>
+        <h2>Top Songs by Play Count</h2>
+        {{ top_songs_plot_html | safe }}
+    </div>
+
+    <div>
+        <h2>Top Albums by Play Count</h2>
+        {{ top_albums_plot_html | safe }}
+    </div>
+
+    <div style="page-break-before: always;">
+        <h2>User Visits Over Time</h2>
+        {{ user_visits_plot_html | safe }}
+    </div>
+
+    <div>
+        <h2>Genre Distribution</h2>
+        {{ genre_distribution_plot_html | safe }}
+    </div>
+
+    <div style="page-break-before: always;">
+        <h2>Average Song Duration by Genre</h2>
+        {{ avg_duration_plot_html | safe }}
+    </div>
+
+    <div>
+        <h2>User Ratings Distribution</h2>
+        {{ user_ratings_plot_html | safe }}
+    </div>
+
+    <div style="page-break-before: always;">
+        <h2>User Signups Over Time</h2>
+        {{ user_signups_plot_html | safe }}
+    </div>
+
+    <div>
+        <h2>Creator Signups Over Time</h2>
+        {{ creator_signups_plot_html | safe }}
+    </div>
+
+    <!-- Additional Metrics Page -->
+    <div style="page-break-before: always;">
+        <h1>Additional Metrics</h1>
+        <div style="border: 1px solid black; padding: 10px;">
+            <h2>Most Streamed Song</h2>
+            <p>{{ most_streamed_song[0] }}</p>
+            <h2>Most Streamed Album</h2>
+            <p>{{ most_streamed_album[0] }}</p>
+            <h2>Most Active User</h2>
+            <p>{{ most_active_user[0] }}</p>
+            <h2>Most Streamed Song Last Month</h2>
+            <p>{{ most_streamed_song_last_month[0] }}</p>
+            <h2>Most Streamed Album Last Month</h2>
+            <p>{{ most_streamed_album_last_month[0] }}</p>
+            <h2>Most Active User Last Month</h2>
+            <p>{{ most_active_user_last_month[0] }}</p>
+            <h2>Highest Rating</h2>
+            <p>{{ highest_rating }}</p>
+            <h2>Highest Rated Songs</h2>
+            <p>{{ highest_rated_songs }}</p>
+        </div>
+    </div>
+
+</body>
+</html>
